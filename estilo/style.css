@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color:floralwhite;
+}
+
+header{
+    background-color:bisque;
+    top:0%;
+    grid-area: header;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor_logo{
+    box-sizing: border-box;
+    height: 100px;
+    width: 100px;
+}
+
+.logo {
+    max-width: min-content;
+    height: 100px;
+    width: 100px;
+}
+
+ul{
+    list-style-type: none;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+li{
+    font-family:'Courier New', Courier, monospace;
+    margin-left: 0.5em;
+}
+
+a{
+    text-decoration: none;
+}
+
+.titulo_intro{
+    text-align: center;
+}
+
+.texto_intro{
+    text-align: center;
+}
+
+.carousel{
+    grid-area: carousel;
+}
+
+.introduccion{
+    grid-area: intro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: darksalmon;
+}
+
+footer{
+    grid-area: footer;
+    text-align: center;
+    background-color: grey;
+}
+
+.envoltura_grilla{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "carousel"
+    "intro"
+    "footer";
+}
+
+.productos{
+    grid-area: productos;
+}
+
+.titulo_seccion{
+    text-align: center;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    grid-area: titulo;
+}
+
+.img_guitarra{
+    width: 280px;
+    height: 280px;
+}
+
+.imagen_producto{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nombre_producto{
+    text-align: center;
+}
+
+.precio_producto{
+    text-align: center;
+}
+
+.envoltura_grilla_seccion_guitarras{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "titulo"
+    "productos"
+    "footer";
+    background-color: azure;
+}
+
+
+
+@media (min-width:500px){
+
+    .titulo_intro{
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .texto_intro{
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    .envoltura_grilla_seccion_guitarras{
+        background-color: coral;
+    }
+
+}
+
+@media (min-width:768px){
+    a:hover{
+        color: red;
+    }
+
+    .introduccion{
+        background-color: coral;
+    }
+}
